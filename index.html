@@ -10,10 +10,11 @@
   <meta property="og:title" content="OpenLoge : Trouvez les bonnes personnes pour vous aider ! Babysitting, bricolage, ménage, checkin Airbnb, petsitting, etc." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.openloge.fr" />
-  <meta property="og:image" content="assets/statik_home_sharer_lighter.png" />
+  <meta property="og:image" content="/assets/statik_home_sharer_lighter.png" />
   <meta property="og:description" content="Dans chaque quartier, une petite équipe d'habitants rend des services aux habitants de son quartier. Plus humain, plus pratique !" />
   <meta property="og:site_name" content="OpenLoge" />
   <meta property="fb:app_id" content="573068896190448" />
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
   <style>
     html {
       font-size: 62.5%;
@@ -32,15 +33,15 @@
       justify-content: center;
       height: 8rem;
     }
-    .nabvar img {
+    .navbar img {
       border-radius: 50%;
-      height: 3rem;
+      height: 5rem;
     }
     .wrapper {
       height: calc(100vh - 8rem);
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-evenly;
     }
     .banner {
       display: flex;
@@ -58,6 +59,37 @@
       font-weight: 300;
       font-size: 2rem;
     }
+    .cta {
+      margin-top: 3rem;
+      display: inline-block;
+      width: fit-content;
+      color: white;
+      padding: 1.5rem 2rem;
+      background-color: #820000;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all .3s ease;
+      text-transform: uppercase;
+    }
+    .cta:hover {
+      background-color: #119da4;
+    }
+    .frise-xs {
+      height: 250px;
+    }
+    .frise-desktop {
+      display: none;
+      height: 250px;
+    }
+    @media (min-width: 900px) {
+      .frise-xs {
+        display: none;
+      }
+      .frise-desktop {
+        display: block;
+        height: 300px;
+      }
+    }
   </style>
 </head>
 
@@ -69,10 +101,12 @@
     <div class="banner">
       <div>
         <h1>Trouvez les bonnes personnes <br>pour vous aider</h1>
-        <div class="tagline">Des services rendus par une équipe dans votre quartier !</div>
+        <div class="tagline">OpenLoge rejoint le réseau <strong>Merci Max</strong> !</div>
+        <a class="cta" href="https://www.mercimax.com/?utm_source=openloge&utm_medium=landing&utm_campaign=ol">> Je découvre</a>
       </div>
     </div>
-    <img src="assets/frise-bd.png" alt="OpenLoge">
+    <div class="frise-xs" style="background: url('assets/frise-xs.png') no-repeat center center; background-size: cover;"></div>
+    <div class="frise-desktop" style="background: url('assets/frise-desktop.png') no-repeat center center; background-size: cover;"></div>
   </div>
 </body>
 </html>
